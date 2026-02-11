@@ -1,0 +1,77 @@
+.recipe-finder-header {
+    background-color: var(--primary-color);
+
+    .container {
+        .recipe-header-container {
+            padding: 48px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .recipe-header-logo {
+                font-size: 40px;
+                line-height: 48px;
+                font-weight: 700;
+                color: var(--secondary-color);
+
+                span {
+                    font-size: 40px;
+                    line-height: 48px;
+                    font-weight: 500;
+                    color: var(--secondary-color);
+                }
+            }
+
+            .header-actions-list {
+                display: flex;
+                gap: 30px;
+
+                .header-action-item {
+                    position: relative;
+
+                    svg {
+                        path {}
+                    }
+                }
+
+                .header-input-label {
+                    position: absolute;
+                    right: 50px;
+                    top: 0px;
+                    transition: all .3s ease;
+
+                    input {
+                        padding: 8px 0 8px 8px;
+                        border-radius: 6px;
+                        border: none;
+                        outline: 0;
+                        border: 1px solid #8080807e;
+                        transition: all .3s ease;
+
+                        &::placeholder {
+                            transition: all .3s ease;
+                            color: #8080808c;
+                        }
+                    }
+
+                    &:hover {
+                        input {
+                            &::placeholder {
+                                color: #808080d5;
+                            }
+                        }
+                    }
+                }
+
+                &.header-input-label.active {
+                    input {
+                        border-color: black;
+                        background-color: red;
+
+                        &::before {}
+                    }
+                }
+            }
+        }
+    }
+}
