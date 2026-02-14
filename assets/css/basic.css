@@ -6,6 +6,7 @@
     list-style: none;
     /* Prevents padding from increasing element width */
     font-family: "Urbanist", sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Font Family Link  */
@@ -16,10 +17,11 @@
     width: 90%;
     max-width: 1240px;
     margin: 0 auto;
-    /* Centers the container */
 }
 
 :root {
     --primary-color: #F6B100;
     --secondary-color: #181A20;
+    --ff-urbanist: "Urbanist", sans-serif;
+    --quick-silver: #9F9F9F;
 }

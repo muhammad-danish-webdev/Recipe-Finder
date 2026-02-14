@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Navbar</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background-color: #f4f4f9;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: #2c3e50;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .burger-icon {
+        cursor: pointer;
+        font-size: 1.5rem;
+        display: block;
+      }
+
+      /* Overlay */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.418);
+        display: none;
+        z-index: 998;
+        backdrop-filter: blur(3px);
+      }
+
+      /* Side Menu */
+      .menu-bar {
+        position: fixed;
+        top: 0;
+        left: -80vw; /* Hidden by default */
+        width: 70vw;
+        height: 500px;
+        background: white;
+        z-index: 999;
+        transition: 0.4s ease;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+        border-bottom-right-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .menu-bar.active {
+        left: 0;
+      }
+
+      .menu-bar a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-size: 1.2rem;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .close-btn {
+        align-self: flex-end;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">MyBrand</div>
+      <div class="burger-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <div class="menu-bar" id="menuBar">
+      <div class="close-btn" onclick="toggleMenu()">&times;</div>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div style="padding: 20px">
+      <h1>Main Content Area</h1>
+      <p>Click the burger icon to see the menu with a professional overlay.</p>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menuBar");
+        const overlay = document.getElementById("overlay");
+
+        if (menu.classList.contains("active")) {
+          menu.classList.remove("active");
+          overlay.style.display = "none";
+        } else {
+          menu.classList.add("active");
+          overlay.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

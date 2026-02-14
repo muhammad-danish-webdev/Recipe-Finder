@@ -24,3 +24,26 @@ searchInput.addEventListener("focus", () => {
 searchInput.addEventListener("blur", () => {
   inputLabel.classList.remove("active");
 });
+// #############################
+// #############################
+// #############################
+
+const searchIcon = document.getElementById("search-icon");
+const searchContainer = document.getElementById("search-container");
+
+searchIcon.addEventListener("click", () => {
+  searchContainer.classList.toggle("active-2");
+});
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// Hamburger Icon JS
+const hamburger = document.getElementById("hamburger-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  // You can also toggle your menu visibility here
+  // const mobileMenu = document.getElementById('mobile-menu');
+  // mobileMenu.classList.toggle('visible');
+});

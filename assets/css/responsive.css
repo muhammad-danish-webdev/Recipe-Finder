@@ -1,0 +1,126 @@
+@media(max-width:992px) {
+    .recipe-finder-header {
+        .container {
+            .recipe-header-container {
+                padding: 35px 0;
+
+                .recipe-header-logo {
+                    font-size: 34px;
+                    line-height: 40px;
+
+                    span {
+                        font-size: 34px;
+                        line-height: 40px;
+                    }
+                }
+
+                .header-actions-list {
+                    .header-action-item {
+                        svg {}
+                    }
+
+                    .header-input-label {
+                        input {
+                            &::placeholder {}
+                        }
+
+                        &:hover {
+                            input {
+                                &::placeholder {}
+                            }
+                        }
+
+                        &.active-2 {
+                            input {
+                                &::placeholder {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .recipe-finder-header {
+        .container {
+            .recipe-header-container {
+                .recipe-header-logo {
+                    span {}
+                }
+
+                .header-navbar-container {
+                    .header-actions-list {
+                        flex-direction: column;
+                        position: fixed;
+                        top: 109px;
+                        left: 0;
+                        width: 90vw;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.493);
+                        backdrop-filter: blur(10px);
+                        align-items: start;
+                        justify-content: start;
+                        padding: 10vw 0 0 10vw;
+                        -webkit-backdrop-filter: blur(10px);
+                        /* For Safari */
+                        /* Extra Polish */
+                        border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+                        .menu-bar-list {
+                            display: flex;
+                            align-items: start;
+                            justify-content: start;
+                            gap: 20px;
+                            flex-direction: column;
+
+                            .menu-bar-item {
+                                list-style: none;
+
+                                a {
+                                    font-size: 1.2rem;
+                                    text-decoration: none;
+                                    color: var(--primary-color);
+                                }
+                            }
+                        }
+
+                        .header-actions-icon-items {
+                            gap: 18px;
+
+                            .header-action-item {
+                                svg {}
+                            }
+                        }
+
+                        .header-input-label {
+                            right: -170px;
+                            top: 45px;
+
+                            input {
+                                &::placeholder {}
+                            }
+
+                            &:hover {
+                                input {
+                                    &::placeholder {}
+                                }
+                            }
+
+                            &.active-2 {
+                                input {
+                                    &::placeholder {}
+                                }
+                            }
+                        }
+                    }
+
+                    .header-hamburger-menu {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
