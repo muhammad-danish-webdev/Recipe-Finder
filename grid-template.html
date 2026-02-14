@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Width Grid</title>
+    <style>
+      /* Parent Container */
+      .container {
+        display: grid;
+        /* Auto columns based on content */
+        grid-template-columns: repeat(3, auto);
+        /* Space between columns */
+        justify-content: space-between;
+        background-color: #ecf0f1;
+        padding: 20px;
+      }
+
+      /* Card Styling */
+      .card {
+        background-color: #2ecc71;
+        color: white;
+        /* Content handles the size through padding */
+        padding: 80px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        /* No width or height property used */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">Dynamic Content 1</div>
+      <div class="card">Dynamic Content 2</div>
+      <div class="card">Dynamic Content 3</div>
+    </div>
+  </body>
+</html>
