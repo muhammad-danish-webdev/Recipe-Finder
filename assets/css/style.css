@@ -294,9 +294,22 @@
     .container {
         .benefit-container {
             .benefit-container-header {
-                .benefit-head {}
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 30px;
 
-                span {}
+                .benefit-head {
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: var(--primary-color);
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: var(--quick-silver);
+                }
             }
 
             .benefit-main-container {
