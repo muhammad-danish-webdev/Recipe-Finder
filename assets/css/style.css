@@ -290,13 +290,14 @@
 /* #############################  */
 /* START :: Benefit Section 
 ******************************************** */
-.benefit-section {
+.product-benefit-section {
     .container {
-        .benefit-container {
-            .benefit-container-header {
+        .product-benefit-container {
+            .product-benefit-container-header {
                 display: flex;
                 justify-content: space-between;
-                padding-bottom: 30px;
+                padding-bottom: 22px;
+                padding-right: 10px;
 
                 .benefit-head {
                     font-size: 20px;
@@ -312,13 +313,21 @@
                 }
             }
 
-            .benefit-main-container {
+            .product-benefit-main-container {
+                display: flex;
+                gap: 30px;
+                justify-content: space-between;
+
                 .product-wrapper-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 28px;
+
                     .product-wrapper-item {
                         display: flex;
                         border-radius: 10px;
                         box-shadow: 0px 4px 40px 0px #0000001A;
-                        max-width: max-content;
+                        max-width: 100%;
                         padding: 8px 30px 8px 8px;
 
                         .product-item-image {
@@ -336,11 +345,13 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            width: 100%;
+                            justify-content: space-between;
                             gap: 20px;
 
                             .product-item-head {
                                 h5 {
-                                    font-size: 24px;
+                                    font-size: clamp(18px, 2vw + 1rem, 24px);
                                     line-height: 32px;
                                     color: var(--secondary-color);
                                 }
@@ -352,8 +363,10 @@
                                     .product-label {
                                         font-size: 18px;
                                         line-height: 24px;
+                                        font-size: clamp(14px, 1vw + 1rem, 18px);
                                         color: var(--primary-color);
                                         font-weight: 500;
+                                        min-width: max-content;
                                     }
                                 }
                             }
@@ -366,6 +379,32 @@
                                 }
 
                                 span {}
+                            }
+                        }
+                    }
+                }
+
+                .product-result-image-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .recipe-finder-login-image {
+                        aspect-ratio: 608/303;
+                        width: 610px;
+
+                        img {
+                            padding: 10px;
+                        }
+                    }
+
+                    .recipe-finder-feed-image-wrapper {
+                        .recipe-finder-feed-image {
+                            aspect-ratio: 608/339;
+                            width: 610px;
+
+                            img {
+                                border-radius: 20px;
                             }
                         }
                     }
