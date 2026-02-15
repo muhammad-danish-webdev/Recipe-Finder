@@ -416,3 +416,67 @@
 
 /* END :: Benefit Section 
 ******************************************** */
+/* #############################  */
+/* #############################  */
+/* #############################  */
+/* #############################  */
+/* #############################  */
+/* START :: Comment Section 
+******************************************** */
+.recipe-comment-section {
+    padding: 42px 0 46px;
+
+    .container {
+        .recipe-comment-container {
+            h4 {
+                font-family: var(--ff-urbanist);
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                color: var(--secondary-color);
+                padding: 6px 0 41px;
+            }
+
+            .comment-main-container {
+                .user-profile-card {
+                    .user-profile-card-container {
+                        .user-profile-card-header {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .user-profile-card-info {
+                                display: flex;
+                                gap: 26px;
+                                align-items: center;
+
+                                .user-profile-image {
+                                    width: 70px;
+                                    height: 70px;
+                                    border-radius: 50%;
+                                    background-color: #D89E6C;
+                                    overflow: hidden;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    img {
+                                        width: 41px;
+                                        height: 72px;
+                                        margin-top: 20px;
+                                    }
+                                }
+
+                                .user-name {
+                                    font-size: 20px;
+                                    line-height: 28px;
+                                    color: var(--secondary-color);
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
