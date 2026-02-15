@@ -437,40 +437,146 @@
                 padding: 6px 0 41px;
             }
 
-            .comment-main-container {
+            .user-profile-cards-container {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+
                 .user-profile-card {
                     .user-profile-card-container {
                         .user-profile-card-header {
                             display: flex;
                             justify-content: space-between;
 
-                            .user-profile-card-info {
+                            .user-profile-card-info-container {
                                 display: flex;
-                                gap: 26px;
-                                align-items: center;
+                                flex-direction: column;
+                                gap: 22px;
 
-                                .user-profile-image {
-                                    width: 70px;
-                                    height: 70px;
-                                    border-radius: 50%;
-                                    background-color: #D89E6C;
-                                    overflow: hidden;
+                                .user-profile-card-info {
                                     display: flex;
+                                    gap: 26px;
                                     align-items: center;
-                                    justify-content: center;
 
-                                    img {
-                                        width: 41px;
-                                        height: 72px;
-                                        margin-top: 20px;
+                                    .user-profile-image {
+                                        width: 70px;
+                                        height: 70px;
+                                        border-radius: 50%;
+                                        background-color: #D89E6C;
+                                        overflow: hidden;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 41px;
+                                            height: 72px;
+                                            margin-top: 20px;
+                                        }
+                                    }
+
+                                    .user-profile-image {
+                                        width: 70px;
+                                        height: 70px;
+                                        border-radius: 50%;
+                                        background-color: #D89E6C;
+                                        overflow: hidden;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 41px;
+                                            height: 72px;
+                                            margin-top: 20px;
+                                        }
+                                    }
+
+                                    .user-name {
+                                        font-size: 20px;
+                                        line-height: 28px;
+                                        color: var(--secondary-color);
+                                        font-weight: 600;
                                     }
                                 }
 
-                                .user-name {
-                                    font-size: 20px;
-                                    line-height: 28px;
+                                .profile-card-desc {
+                                    font-size: 16px;
+                                    line-height: 20px;
                                     color: var(--secondary-color);
-                                    font-weight: 600;
+                                }
+
+                                .user-card-footer {
+                                    display: flex;
+                                    gap: 15px;
+                                    align-items: center;
+
+                                    .user-card-stat {
+                                        display: flex;
+                                        gap: 8px;
+
+                                        span {
+                                            font-size: 15px;
+                                            line-height: 20px;
+                                            color: var(--quick-silver);
+                                        }
+                                    }
+
+                                    .card-posted-time {
+                                        font-size: 15px;
+                                        line-height: 20px;
+                                        color: var(--quick-silver);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & :nth-child(2).user-profile-card {
+                    .user-profile-card-container {
+                        .user-profile-card-header {
+                            .user-profile-card-info-container {
+                                .user-profile-card-info {
+                                    .user-profile-image {
+                                        background-color: #56548C;
+
+                                        img {
+                                            width: 46px;
+                                            height: 64px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & :nth-child(3).user-profile-card {
+                    .user-profile-card-container {
+                        .user-profile-card-header {
+                            .user-profile-card-info-container {
+                                .user-profile-card-info {
+                                    .user-profile-image {
+                                        background-color: white;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    .user-name {}
+                                }
+
+                                .profile-card-desc {}
+
+                                .user-card-footer {
+                                    .user-card-stat {
+                                        span {}
+                                    }
+
+                                    .card-posted-time {}
                                 }
                             }
                         }
