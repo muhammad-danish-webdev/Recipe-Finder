@@ -3,38 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Width Grid</title>
+    <title>Recipe Layout</title>
     <style>
-      /* Parent Container */
-      .container {
-        display: grid;
-        /* Auto columns based on content */
-        grid-template-columns: repeat(3, auto);
-        /* Space between columns */
-        justify-content: space-between;
-        background-color: #ecf0f1;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
         padding: 20px;
       }
 
-      /* Card Styling */
-      .card {
-        background-color: #2ecc71;
-        color: white;
-        /* Content handles the size through padding */
-        padding: 80px 60px;
+      /* Main Parent Container */
+      .main-wrapper {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        /* No width or height property used */
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 90vh; /* Fixed height for demo to show bottom image filling space */
+      }
+
+      /* Left Container: List of 5 Cards */
+      .left-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow-y: auto;
+      }
+
+      .card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        min-height: 100px;
+      }
+
+      /* Right Container: Two Images */
+      .right-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 50px; /* 50px gap between images as requested */
+      }
+
+      .top-image-box {
+        width: 100%;
+        aspect-ratio: 608 / 339; /* Strictly follows your aspect ratio */
+        background-color: #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .bottom-image-box {
+        flex-grow: 1; /* Takes all remaining height */
+        width: 100%;
+        background-color: #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Keeps image looking good while filling space */
+        display: block;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="card">Dynamic Content 1</div>
-      <div class="card">Dynamic Content 2</div>
-      <div class="card">Dynamic Content 3</div>
+    <div class="main-wrapper">
+      <div class="left-container">
+        <div class="card"><h3>Recipe Card 1</h3></div>
+        <div class="card"><h3>Recipe Card 2</h3></div>
+        <div class="card"><h3>Recipe Card 3</h3></div>
+        <div class="card"><h3>Recipe Card 4</h3></div>
+        <div class="card"><h3>Recipe Card 5</h3></div>
+      </div>
+
+      <div class="right-container">
+        <div class="top-image-box">
+          <img src="https://picsum.photos/608/339" alt="Top Image" />
+        </div>
+
+        <div class="bottom-image-box">
+          <img src="https://picsum.photos/800/1000" alt="Bottom Image" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
