@@ -351,7 +351,7 @@
 
                             .product-item-head {
                                 h5 {
-                                    font-size: clamp(18px, 2vw + 1rem, 24px);
+                                    font-size: 24px;
                                     line-height: 32px;
                                     color: var(--secondary-color);
                                 }
@@ -363,7 +363,6 @@
                                     .product-label {
                                         font-size: 18px;
                                         line-height: 24px;
-                                        font-size: clamp(14px, 1vw + 1rem, 18px);
                                         color: var(--primary-color);
                                         font-weight: 500;
                                         min-width: max-content;

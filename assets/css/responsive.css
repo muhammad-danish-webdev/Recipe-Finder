@@ -1,3 +1,79 @@
+@media(max-width:1192px) {
+
+    /* START :: Benefit Section 
+******************************************** */
+    .product-benefit-section {
+        .container {
+            .product-benefit-container {
+                .product-benefit-container-header {
+                    .benefit-head {}
+
+                    span {}
+                }
+
+                .product-benefit-main-container {
+                    .product-wrapper-list {
+                        .product-wrapper-item {
+                            .product-item-image {
+                                img {}
+                            }
+
+                            .product-item-content {
+                                .product-item-head {
+                                    h5 {
+                                        font-size: 18px;
+                                    }
+
+                                    .product-icon-box {
+                                        .product-label {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+
+                                .rating-badge {
+                                    display: none;
+
+                                    span {}
+                                }
+                            }
+                        }
+                    }
+
+                    .product-result-image-container {
+                        .recipe-finder-login-image {
+                            img {}
+                        }
+
+                        .recipe-finder-feed-image-wrapper {
+                            .feed-image-header {
+                                .feed-image-heart-icon {}
+
+                                .start-cook-btn {}
+                            }
+
+                            .recipe-finder-feed-image {
+                                img {}
+                            }
+
+                            .feed-image-footer {
+                                .feed-image-title {}
+
+                                .feed-image-desc {}
+                            }
+
+                            &::before {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* END :: Benefit Section 
+******************************************** */
+}
+
 @media(max-width:992px) {
     .recipe-finder-header {
         .container {
@@ -40,6 +116,130 @@
             }
         }
     }
+
+    /* END :: Header Section 
+    ******************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Featured Recipe Section 
+    ******************************************/
+    .featured-recipe-section {
+        .container {
+            .featured-recipe-container {
+                h2 {}
+
+                .featured-desc {}
+
+                .featured-recipes-grid {
+                    grid-template-columns: repeat(3, auto);
+
+                    .featured-recipe-card {
+                        margin: 0 auto;
+
+                        &:nth-child(4),
+                        &:nth-child(5) {
+                            display: none;
+                        }
+
+                        .recipe-image {
+                            img {}
+                        }
+
+                        .card-title {}
+
+                        .card-rating-wrapper {
+                            .rating-desc {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* END :: Featured Recipe Section 
+**********************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Benefit Section 
+******************************************** */
+    .product-benefit-section {
+        .container {
+            .product-benefit-container {
+                .product-benefit-container-header {
+                    .benefit-head {}
+
+                    span {}
+                }
+
+                .product-benefit-main-container {
+                    flex-direction: column;
+
+                    .product-wrapper-list {
+                        .product-wrapper-item {
+                            .product-item-image {
+                                img {}
+                            }
+
+                            .product-item-content {
+                                .product-item-head {
+                                    h5 {}
+
+                                    .product-icon-box {
+                                        .product-label {}
+                                    }
+                                }
+
+                                .rating-badge {
+                                    display: flex;
+
+                                    svg {
+                                        path {}
+                                    }
+
+                                    span {}
+                                }
+                            }
+                        }
+                    }
+
+                    .product-result-image-container {
+                        .recipe-finder-login-image {
+                            img {}
+                        }
+
+                        .recipe-finder-feed-image-wrapper {
+                            .feed-image-header {
+                                .feed-image-heart-icon {}
+
+                                .start-cook-btn {}
+                            }
+
+                            .recipe-finder-feed-image {
+                                img {}
+                            }
+
+                            .feed-image-footer {
+                                .feed-image-title {}
+
+                                .feed-image-desc {}
+                            }
+
+                            &::before {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* END :: Benefit Section 
+******************************************** */
 }
 
 @media(max-width:576px) {
