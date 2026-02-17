@@ -332,7 +332,7 @@
                         flex-direction: column;
                         position: fixed;
                         top: 200px;
-                        width: 500px;
+                        width: 350px;
                         height: 70%;
                         background: rgba(0, 0, 0, 0.493);
                         backdrop-filter: blur(10px);
@@ -408,6 +408,15 @@
         }
     }
 
+    /* END :: Header Section 
+    ******************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Featured Recipe Section 
+    ******************************************/
     .featured-recipe-section {
         .container {
             .featured-recipe-container {
@@ -452,6 +461,15 @@
         }
     }
 
+    /* END :: Featured Recipe Section 
+    ******************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Product Benefit Section 
+    ******************************************/
     .product-benefit-section {
         .container {
             .product-benefit-container {
@@ -533,6 +551,183 @@
                                     br {}
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:476px) {
+    .recipe-finder-header {
+        .container {
+            .recipe-header-container {
+                padding: 22px 0;
+
+                .recipe-header-logo {
+                    font-size: 28px;
+                    line-height: 34px;
+
+                    span {
+                        font-size: 28px;
+                        line-height: 34px;
+                    }
+                }
+
+                .header-navbar-container {
+                    .header-actions-list {
+                        &.header-actions-list.active {
+                            top: 78px;
+
+                            .header-input-label {
+                                input {
+                                    &::placeholder {}
+                                }
+
+                                &:hover {
+                                    input {
+                                        &::placeholder {}
+                                    }
+                                }
+
+                                &.active-2 {
+                                    input {
+                                        &::placeholder {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .header-hamburger-menu {
+                        width: 22px;
+                        height: 17px;
+
+                        /* Active State: Transforms into a Cross */
+                        &.header-hamburger-menu.active .bar1 {
+                            transform: translate(-2.5px, 7px) rotate(45deg);
+                            /* Move down and rotate */
+                        }
+
+                        &.header-hamburger-menu.active .bar3 {
+                            transform: translate(-3px, -7px) rotate(-45deg);
+                            /* Move up and rotate */
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* END :: Header Section 
+    ******************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Featured Recipe Section 
+    ******************************************/
+    .featured-recipe-section {
+        padding: 42px 0 50px;
+
+        .container {
+            .featured-recipe-container {
+                h2 {
+                    font-size: 26px;
+                    line-height: 36px;
+                }
+
+                .featured-desc {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+
+                .featured-recipes-grid {
+                    .featured-recipe-card {
+                        .card-rating-wrapper {
+                            .rating-desc {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* END :: Featured Recipe Section 
+    ******************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Product Benefit Section
+    *****************************************/
+    .product-benefit-section {
+        .container {
+            .product-benefit-container {
+                .product-benefit-container-header {
+                    padding-bottom: 12px;
+
+                    .benefit-head {}
+
+                    span {}
+                }
+
+                .product-benefit-main-container {
+                    .product-wrapper-list {
+                        gap: 10px;
+
+                        .product-wrapper-item {
+                            .product-item-image {
+                                img {
+                                    aspect-ratio: 90/72;
+                                    width: 90px;
+                                }
+                            }
+
+                            .product-item-content {
+                                padding-left: 13px;
+
+                                .product-item-head {
+                                    h5 {}
+
+                                    .product-icon-box {
+                                        .product-label {}
+                                    }
+                                }
+
+                                .rating-badge {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .product-result-image-container {
+                        .recipe-finder-login-image {
+                            img {}
+                        }
+
+                        .recipe-finder-feed-image-wrapper {
+                            .feed-image-header {
+                                .feed-image-heart-icon {}
+
+                                .start-cook-btn {}
+                            }
+
+                            .recipe-finder-feed-image {
+                                img {}
+                            }
+
+                            .feed-image-footer {
+                                .feed-image-title {}
+
+                                .feed-image-desc {}
+                            }
+
+                            &::before {}
                         }
                     }
                 }
