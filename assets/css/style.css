@@ -22,6 +22,26 @@
     }
 }
 
+/* ##################   */
+/* ##################   */
+/* ##################   */
+/* ##################   */
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.418);
+    display: none;
+    backdrop-filter: blur(3px);
+
+    &.overlay.active {
+        display: none;
+    }
+}
+
 /* ################################  */
 /* ################################  */
 /* ################################  */
@@ -38,19 +58,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            /* Overlay */
-            .overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.418);
-                display: none;
-                z-index: 998;
-                backdrop-filter: blur(3px);
-            }
 
             .recipe-header-logo {
                 font-size: 44px;
@@ -171,10 +178,8 @@
                     width: 100%;
                     height: 3px;
                     background-color: white;
-                    /* Or any color you prefer */
                     border-radius: 2px;
                     transition: all 0.3s ease-in-out;
-                    /* Smooth transition for transformation */
                 }
 
                 /* Active State: Transforms into a Cross */
@@ -230,6 +235,8 @@
                 grid-template-columns: repeat(5, auto);
                 justify-content: space-between;
                 margin: 0 auto;
+                position: relative;
+                z-index: -1;
 
                 .featured-recipe-card {
                     width: 100%;
@@ -419,6 +426,27 @@
                                 border-radius: 10px;
                                 background-color: #181A2080;
                                 backdrop-filter: blur(20px);
+                                cursor: pointer;
+
+                                svg {
+                                    path {
+                                        transition: all .3s ease;
+                                    }
+                                }
+
+                                &:hover {
+                                    svg {
+                                        path {
+                                            stroke: red;
+                                        }
+                                    }
+                                }
+
+                                &:active {
+                                    svg {
+                                        transform: scale(1.2);
+                                    }
+                                }
                             }
 
                             .start-cook-btn {
@@ -428,6 +456,15 @@
                                 color: white;
                                 border: none;
                                 outline: none;
+                                transition: all .3s ease;
+                                cursor: pointer;
+                                border: 1px solid transparent;
+
+                                &:hover {
+                                    background-color: white;
+                                    color: var(--primary-color);
+                                    border: 1px solid var(--primary-color);
+                                }
                             }
                         }
 
@@ -441,6 +478,7 @@
                                 width: 100%;
                                 height: 100%;
                                 aspect-ratio: 610/340;
+                                display: flex;
                             }
                         }
 

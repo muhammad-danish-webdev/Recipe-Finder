@@ -877,6 +877,17 @@
           overlay.style.display = "block";
         }
       }
+
+      const hamBurgerIcon = document.getElementById("hamburger-menu");
+      const headerActionList = document.querySelector(".header-actions-list");
+      const overLay = document.querySelector("#overlay");
+      hamBurgerIcon.addEventListener("click", () => {
+        headerActionList.classList.toggle("active");
+      });
+
+      overLay.addEventListener("click", () => {
+        overLay.classList.toggle = "active";
+      });
     </script>
   </body>
 </html>

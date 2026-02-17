@@ -3,97 +3,183 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe Layout</title>
+    <title>Responsive Mobile Menu</title>
     <style>
+      /* SCSS Structure Compiled to CSS */
+      /* (SCSS ka dhancha jo CSS mein tabdeel kiya gaya hai) */
+
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        padding: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #f0f0f0;
       }
 
-      /* Main Parent Container */
-      .main-wrapper {
-        display: flex;
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        height: 90vh; /* Fixed height for demo to show bottom image filling space */
-      }
-
-      /* Left Container: List of 5 Cards */
-      .left-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        overflow-y: auto;
-      }
-
-      .card {
-        background: white;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        min-height: 100px;
-      }
-
-      /* Right Container: Two Images */
-      .right-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 50px; /* 50px gap between images as requested */
-      }
-
-      .top-image-box {
-        width: 100%;
-        aspect-ratio: 608 / 339; /* Strictly follows your aspect ratio */
-        background-color: #ddd;
-        border-radius: 8px;
+      /* Prevents scrolling when menu is active */
+      /* (Menu active hone par scrolling ko rokta hai) */
+      body.no-scroll {
         overflow: hidden;
       }
 
-      .bottom-image-box {
-        flex-grow: 1; /* Takes all remaining height */
-        width: 100%;
-        background-color: #ccc;
-        border-radius: 8px;
-        overflow: hidden;
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Keeps image looking good while filling space */
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Burger Icon Styling */
+      .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1100;
+      }
+
+      .burger-menu span {
         display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        transition: 0.3s;
+      }
+
+      /* Mobile Menu Bar */
+      .mobile-nav {
+        position: fixed;
+        top: -100%; /* Start off-screen (Screen se bahar shuru karein) */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vw; /* 90% of Viewport Width */
+        height: 80vh; /* 80% of Viewport Height */
+        background-color: #2c3e50;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Active State for Menu */
+      .mobile-nav.active {
+        top: 10vh; /* Centered vertically (Vertical taur par darmiyan mein) */
+      }
+
+      .mobile-nav ul {
+        list-style: none;
+        text-align: center;
+      }
+
+      .mobile-nav ul li {
+        margin: 25px 0;
+      }
+
+      .mobile-nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .mobile-nav ul li a:hover {
+        color: #3498db;
+      }
+
+      /* Content for scrolling test */
+      .main-content {
+        padding: 50px 10%;
+        text-align: center;
+      }
+
+      .placeholder-box {
+        height: 400px;
+        background: #ddd;
+        margin: 20px 0;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #666;
       }
     </style>
   </head>
   <body>
-    <div class="main-wrapper">
-      <div class="left-container">
-        <div class="card"><h3>Recipe Card 1</h3></div>
-        <div class="card"><h3>Recipe Card 2</h3></div>
-        <div class="card"><h3>Recipe Card 3</h3></div>
-        <div class="card"><h3>Recipe Card 4</h3></div>
-        <div class="card"><h3>Recipe Card 5</h3></div>
-      </div>
+    <header class="header">
+      <div class="logo">GEMINI CREATIVE</div>
 
-      <div class="right-container">
-        <div class="top-image-box">
-          <img src="https://picsum.photos/608/339" alt="Top Image" />
-        </div>
-
-        <div class="bottom-image-box">
-          <img src="https://picsum.photos/800/1000" alt="Bottom Image" />
-        </div>
+      <div class="burger-menu" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileMenu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1>Website Main Content</h1>
+      <p
+        >Scroll down to see the header stay fixed and test the background
+        lock.</p
+      >
+      <div class="placeholder-box">Content Section 1</div>
+      <div class="placeholder-box">Content Section 2</div>
+      <div class="placeholder-box">Content Section 3</div>
+      <div class="placeholder-box">Content Section 4</div>
+    </main>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const body = document.body;
+
+      menuToggle.addEventListener("click", () => {
+        // Toggle the 'active' class on menu
+        // (Menu par 'active' class ko toggle karein)
+        mobileMenu.classList.toggle("active");
+
+        // Toggle the 'no-scroll' class on body to lock scrolling
+        // (Scrolling ko lock karne ke liye body par 'no-scroll' class toggle karein)
+        body.classList.toggle("no-scroll");
+      });
+
+      // Close menu if a link is clicked
+      // (Agar kisi link par click ho to menu band kar dein)
+      const navLinks = document.querySelectorAll(".mobile-nav a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+          body.classList.remove("no-scroll");
+        });
+      });
+    </script>
   </body>
 </html>
