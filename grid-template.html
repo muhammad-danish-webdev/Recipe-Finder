@@ -2,57 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>JS Selectors Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Cards</title>
     <style>
-      .box {
-        padding: 10px;
-        margin: 5px;
-        border: 1px solid black;
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 40px;
       }
-      .active {
-        background-color: yellow;
+
+      /* Base Card Styling */
+      .card {
+        width: 450px;
+        height: 120px;
+        background: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+        border: 1px solid #ddd;
       }
-      #special-box {
-        border: 3px solid red;
+
+      /* Option 1: Elevation & Border Glow */
+      .opt-1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        border-color: #3498db;
+      }
+
+      /* Option 2: Slide-in Background */
+      .opt-2 {
+        position: relative;
+        z-index: 1;
+      }
+      .opt-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #2c3e50;
+        transition: 0.4s;
+        z-index: -1;
+      }
+      .opt-2:hover::before {
+        left: 0;
+      }
+      .opt-2:hover {
+        color: white;
+      }
+
+      /* Option 3: Zoom & Scale */
+      .opt-3:hover {
+        transform: scale(1.03);
+        background-color: #f0fdf4;
+      }
+
+      /* Option 4: Left Accent Border */
+      .opt-4 {
+        border-left: 5px solid #e74c3c;
+      }
+      .opt-4:hover {
+        padding-left: 35px;
+        background-color: #fdf2f2;
+      }
+
+      /* Option 5: Shadow Spread */
+      .opt-5:hover {
+        box-shadow: 0 0 0 10px rgba(155, 89, 182, 0.1);
+        border-color: #9b59b6;
+      }
+
+      .content h3 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+      .content p {
+        margin: 5px 0 0;
+        color: #666;
+        font-size: 0.9rem;
+      }
+      .opt-2:hover p {
+        color: #ccc;
       }
     </style>
   </head>
   <body>
-    <div id="main-title">Main Title (ID)</div>
+    <div class="card opt-1">
+      <div class="content">
+        <h3>Option 1: Elevation</h3>
+        <p>Smooth lift with a subtle blue border glow.</p>
+      </div>
+    </div>
 
-    <div class="item">Item 1 (Class)</div>
-    <div class="item">Item 2 (Class)</div>
-    <div class="item">Item 3 (Class)</div>
+    <div class="card opt-2">
+      <div class="content">
+        <h3>Option 2: Slide Fill</h3>
+        <p>Dark background slides in from the left side.</p>
+      </div>
+    </div>
 
-    <button id="btn-run">Run JS Code</button>
+    <div class="card opt-3">
+      <div class="content">
+        <h3>Option 3: Gentle Zoom</h3>
+        <p>Slightly increases in size with a color tint.</p>
+      </div>
+    </div>
 
-    <script>
-      const btn = document.getElementById("btn-run");
+    <div class="card opt-4">
+      <div class="content">
+        <h3>Option 4: Padding Shift</h3>
+        <p>Moves content to the right on hover.</p>
+      </div>
+    </div>
 
-      btn.addEventListener("click", () => {
-        // 1. getElementById: Use for ONE specific unique item.
-        // (Sirf AIK makhsoos unique cheez ke liye.)
-        const title = document.getElementById("main-title");
-        title.style.color = "blue";
-
-        // 2. querySelector: Use for the FIRST match of a CSS selector.
-        // (Pehlay milnay walay CSS selector ke liye.)
-        const firstItem = document.querySelector(".item");
-        firstItem.style.fontWeight = "bold";
-
-        // 3. querySelectorAll: Use to get ALL matches as a list.
-        // (TAMAM milnay walay elements ko list ki shakal mein lene ke liye.)
-        const allItems = document.querySelectorAll(".item");
-        allItems.forEach((item) => {
-          item.classList.toggle("active");
-        });
-
-        // 4. getElementsByClassName: Older way to get a collection.
-        // (Purana tariqa collection hasil karne ka.)
-        const collection = document.getElementsByClassName("item");
-        console.log("Total items found:", collection.length);
-        collection[1].innerHTML = "this is Changed item";
-      });
-    </script>
+    <div class="card opt-5">
+      <div class="content">
+        <h3>Option 5: Outer Glow</h3>
+        <p>Creates a thick, soft purple outer shadow.</p>
+      </div>
+    </div>
   </body>
 </html>

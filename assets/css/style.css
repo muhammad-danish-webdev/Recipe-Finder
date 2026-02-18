@@ -47,7 +47,7 @@
 .header-input-label {
     position: absolute;
     right: 27px;
-    top: 0px;
+    top: -4px;
     transition: all .3s ease;
     display: inline-block;
     vertical-align: middle;
@@ -91,7 +91,6 @@
 
 .header-input-label.show-hide {
     width: 200px;
-    /* Adjust as needed */
     opacity: 1;
     margin-right: 10px;
 }

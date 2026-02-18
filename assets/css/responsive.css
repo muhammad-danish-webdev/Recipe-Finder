@@ -662,12 +662,25 @@
                 .featured-desc {
                     font-size: 20px;
                     line-height: 28px;
+                    padding-top: 0;
                 }
 
                 .featured-recipes-grid {
                     .featured-recipe-card {
+                        .recipe-image {
+                            max-width: 152px;
+                        }
+
+                        .card-title {
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+
                         .card-rating-wrapper {
-                            .rating-desc {}
+                            .rating-desc {
+                                font-size: 14px;
+                                line-height: 17px;
+                            }
                         }
                     }
                 }
@@ -711,10 +724,16 @@
                                 padding-left: 13px;
 
                                 .product-item-head {
-                                    h5 {}
+                                    h5 {
+                                        font-size: 16px;
+                                        line-height: 21px;
+                                    }
 
                                     .product-icon-box {
-                                        .product-label {}
+                                        .product-label {
+                                            font-size: 14px;
+                                            line-height: 18px;
+                                        }
                                     }
                                 }
 
