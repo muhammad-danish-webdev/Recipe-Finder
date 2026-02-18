@@ -84,7 +84,6 @@
                 .recipe-header-logo {
                     font-size: 34px;
                     line-height: 40px;
-                    margin: 0 auto;
 
                     span {
                         font-size: 34px;
@@ -327,6 +326,8 @@
                 position: relative;
 
                 .recipe-header-logo {
+                    margin: 0 auto;
+
                     span {}
                 }
 

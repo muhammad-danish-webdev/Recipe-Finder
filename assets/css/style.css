@@ -38,7 +38,7 @@
     backdrop-filter: blur(3px);
 
     &.overlay.active {
-        display: none;
+        display: flex
     }
 }
 
@@ -246,6 +246,10 @@
             .header-hamburger-menu.active .bar3 {
                 transform: translateY(-8.5px) rotate(-45deg);
                 /* Move up and rotate */
+            }
+
+            .header-input-label {
+                display: none;
             }
         }
     }
