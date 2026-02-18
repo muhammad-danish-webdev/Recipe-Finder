@@ -102,6 +102,8 @@
 /* START :: Recipe finder Header 
 ********************************************** */
 .recipe-finder-header {
+    position: sticky;
+    top: 0;
     background-color: var(--primary-color);
 
     .container {

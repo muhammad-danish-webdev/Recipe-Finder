@@ -320,6 +320,10 @@
 }
 
 @media(max-width:576px) {
+    .container {
+        width: 93%;
+    }
+
     .recipe-finder-header {
         .container {
             .recipe-header-container {
@@ -336,8 +340,9 @@
                         flex-direction: column;
                         position: fixed;
                         top: 200px;
-                        width: 350px;
-                        height: 70%;
+                        max-width: 100%;
+                        width: 360px;
+                        height: 100%;
                         background: rgba(0, 0, 0, 0.493);
                         backdrop-filter: blur(10px);
                         align-items: start;
@@ -567,7 +572,9 @@
     .recipe-finder-header {
         .container {
             .recipe-header-container {
-                padding: 22px 0;
+                padding: 16px 0 62px;
+                width: 100%;
+                position: relative;
 
                 .recipe-header-logo {
                     font-size: 28px;
@@ -582,7 +589,7 @@
                 .header-navbar-container {
                     .header-actions-list {
                         &.header-actions-list.active {
-                            top: 78px;
+                            top: 112px;
 
                             .header-input-label {
                                 input {
@@ -619,6 +626,15 @@
                         transform: translate(-3px, -7px) rotate(-45deg);
                         /* Move up and rotate */
                     }
+                }
+
+                .header-input-label {
+                    display: flex;
+                    position: absolute;
+                    bottom: 16px;
+                    top: unset;
+                    left: 0;
+                    right: 0;
                 }
             }
         }
