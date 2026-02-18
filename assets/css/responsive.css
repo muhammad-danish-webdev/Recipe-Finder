@@ -41,31 +41,32 @@
                         }
                     }
 
-                    .product-result-image-container {
-                        .recipe-finder-login-image {
+                    /* .product-result-image-container { */
+                    .recipe-finder-login-image {
+                        img {}
+                    }
+
+                    .recipe-finder-feed-image-wrapper {
+                        .feed-image-header {
+                            .feed-image-heart-icon {}
+
+                            .start-cook-btn {}
+                        }
+
+                        .recipe-finder-feed-image {
                             img {}
                         }
 
-                        .recipe-finder-feed-image-wrapper {
-                            .feed-image-header {
-                                .feed-image-heart-icon {}
+                        .feed-image-footer {
+                            .feed-image-title {}
 
-                                .start-cook-btn {}
-                            }
-
-                            .recipe-finder-feed-image {
-                                img {}
-                            }
-
-                            .feed-image-footer {
-                                .feed-image-title {}
-
-                                .feed-image-desc {}
-                            }
-
-                            &::before {}
+                            .feed-image-desc {}
                         }
+
+                        &::before {}
                     }
+
+                    /* } */
                 }
             }
         }
@@ -208,31 +209,32 @@
                         }
                     }
 
-                    .product-result-image-container {
-                        .recipe-finder-login-image {
+                    /* .product-result-image-container { */
+                    .recipe-finder-login-image {
+                        img {}
+                    }
+
+                    .recipe-finder-feed-image-wrapper {
+                        .feed-image-header {
+                            .feed-image-heart-icon {}
+
+                            .start-cook-btn {}
+                        }
+
+                        .recipe-finder-feed-image {
                             img {}
                         }
 
-                        .recipe-finder-feed-image-wrapper {
-                            .feed-image-header {
-                                .feed-image-heart-icon {}
+                        .feed-image-footer {
+                            .feed-image-title {}
 
-                                .start-cook-btn {}
-                            }
-
-                            .recipe-finder-feed-image {
-                                img {}
-                            }
-
-                            .feed-image-footer {
-                                .feed-image-title {}
-
-                                .feed-image-desc {}
-                            }
-
-                            &::before {}
+                            .feed-image-desc {}
                         }
+
+                        &::before {}
                     }
+
+                    /* } */
                 }
             }
         }
@@ -288,31 +290,32 @@
                         }
                     }
 
-                    .product-result-image-container {
-                        .recipe-finder-login-image {
+                    /* .product-result-image-container { */
+                    .recipe-finder-login-image {
+                        img {}
+                    }
+
+                    .recipe-finder-feed-image-wrapper {
+                        .feed-image-header {
+                            .feed-image-heart-icon {}
+
+                            .start-cook-btn {}
+                        }
+
+                        .recipe-finder-feed-image {
                             img {}
                         }
 
-                        .recipe-finder-feed-image-wrapper {
-                            .feed-image-header {
-                                .feed-image-heart-icon {}
+                        .feed-image-footer {
+                            .feed-image-title {}
 
-                                .start-cook-btn {}
-                            }
-
-                            .recipe-finder-feed-image {
-                                img {}
-                            }
-
-                            .feed-image-footer {
-                                .feed-image-title {}
-
-                                .feed-image-desc {}
-                            }
-
-                            &::before {}
+                            .feed-image-desc {}
                         }
+
+                        &::before {}
                     }
+
+                    /* } */
                 }
             }
         }
@@ -525,43 +528,44 @@
                         }
                     }
 
-                    .product-result-image-container {
-                        .recipe-finder-login-image {
-                            img {}
-                        }
+                    /* .product-result-image-container { */
+                    .recipe-finder-login-image {
+                        img {}
+                    }
 
-                        .recipe-finder-feed-image-wrapper {
-                            .feed-image-header {
-                                .feed-image-heart-icon {
-                                    svg {
-                                        g {
-                                            path {}
-                                        }
+                    .recipe-finder-feed-image-wrapper {
+                        .feed-image-header {
+                            .feed-image-heart-icon {
+                                svg {
+                                    g {
+                                        path {}
+                                    }
 
-                                        defs {
-                                            clipPath {
-                                                rect {}
-                                            }
+                                    defs {
+                                        clipPath {
+                                            rect {}
                                         }
                                     }
                                 }
-
-                                .start-cook-btn {}
                             }
 
-                            .recipe-finder-feed-image {
-                                img {}
-                            }
+                            .start-cook-btn {}
+                        }
 
-                            .feed-image-footer {
-                                h5.feed-image-title {}
+                        .recipe-finder-feed-image {
+                            img {}
+                        }
 
-                                span.feed-image-desc {
-                                    br {}
-                                }
+                        .feed-image-footer {
+                            h5.feed-image-title {}
+
+                            span.feed-image-desc {
+                                br {}
                             }
                         }
                     }
+
+                    /* } */
                 }
             }
         }
@@ -744,31 +748,33 @@
                         }
                     }
 
-                    .product-result-image-container {
-                        .recipe-finder-login-image {
+                    /* 
+                    .product-result-image-container { */
+                    .recipe-finder-login-image {
+                        img {}
+                    }
+
+                    .recipe-finder-feed-image-wrapper {
+                        .feed-image-header {
+                            .feed-image-heart-icon {}
+
+                            .start-cook-btn {}
+                        }
+
+                        .recipe-finder-feed-image {
                             img {}
                         }
 
-                        .recipe-finder-feed-image-wrapper {
-                            .feed-image-header {
-                                .feed-image-heart-icon {}
+                        .feed-image-footer {
+                            .feed-image-title {}
 
-                                .start-cook-btn {}
-                            }
-
-                            .recipe-finder-feed-image {
-                                img {}
-                            }
-
-                            .feed-image-footer {
-                                .feed-image-title {}
-
-                                .feed-image-desc {}
-                            }
-
-                            &::before {}
+                            .feed-image-desc {}
                         }
+
+                        &::before {}
                     }
+
+                    /* } */
                 }
             }
         }

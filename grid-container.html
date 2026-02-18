@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Reorder</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Main Container setup */
+      .main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+        gap: 20px;
+        padding: 20px;
+      }
+
+      /* Essential logic: make sub-containers 'invisible' for layout purposes */
+      /* Taake andar ke items bahar wale grid ka hissa ban sakein */
+      .left-container,
+      .right-container {
+        display: contents;
+      }
+
+      /* Card Styling */
+      .card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        grid-column: 1; /* Desktop: Left side */
+      }
+
+      .card {
+        width: 50vw;
+        height: 120px;
+        background-color: #3498db;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      /* Image Styling */
+      .img-box {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        background-color: #ddd;
+      }
+
+      .img-1 {
+        grid-column: 2;
+      }
+      .img-2 {
+        grid-column: 2;
+      }
+
+      /* Mobile Responsive Logic (800px) */
+      @media (max-width: 800px) {
+        .main-container {
+          grid-template-columns: 1fr; /* Single column */
+        }
+
+        .card {
+          width: 100%; /* Full width on small screens */
+        }
+
+        /* Reordering the elements */
+        .img-1 {
+          order: 1;
+        } /* First Image First */
+        .card-list {
+          order: 2;
+        } /* List Second */
+        .img-2 {
+          order: 3;
+        } /* Second Image Third */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-container">
+        <div class="card-list">
+          <div class="card">Card 1</div>
+          <div class="card">Card 2</div>
+          <div class="card">Card 3</div>
+          <div class="card">Card 4</div>
+          <div class="card">Card 5</div>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <img
+          src="https://www.google.com/search?q=hot+images&oq=hot+images&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDMxNDVqMGo3qAIIsAIB8QUOUE3utkG1zPEFDlBN7rZBtcw&sourceid=chrome&ie=UTF-8#sv=CAMSZxowKg4wbUVmX3FMc2gxUHBJTTIOMG1FZl9xTHNoMVBwSU06DlZwczhGblFPUnRaWlZNIAQqLwobX3Y4MlZhZkxUSDdpcmtkVVB0SlhBa0FNXzU1Eg4wbUVmX3FMc2gxUHBJTRgAMAEYByCQnt3yBTACSggQAhgCIAIoAg"
+          alt="Image 1"
+          class="img-box img-1" />
+        <img
+          src="https://www.google.com/search?q=hot+images&oq=hot+images&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDMxNDVqMGo3qAIIsAIB8QUOUE3utkG1zPEFDlBN7rZBtcw&sourceid=chrome&ie=UTF-8#sv=CAMSZxowKg5nWnFLUVJsbkp0UTFhTTIOZ1pxS1FSbG5KdFExYU06DmFCeVBlZ1o3NjZJTHZNIAQqLwobX3Y4MlZhZkxUSDdpcmtkVVB0SlhBa0FNXzU1Eg5nWnFLUVJsbkp0UTFhTRgAMAEYByCbzsqEBzACSggQAhgCIAIoAg"
+          alt="Image 2"
+          class="img-box img-2" />
+      </div>
+    </div>
+  </body>
+</html>
