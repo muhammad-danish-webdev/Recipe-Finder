@@ -32,7 +32,7 @@ const searchIcon = document.getElementById("search-icon");
 const searchContainer = document.getElementById("search-container");
 
 searchIcon.addEventListener("click", () => {
-  searchContainer.classList.toggle("active-2");
+  searchContainer.classList.toggle("show-hide");
 });
 
 ///////////////////////////////////

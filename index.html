@@ -892,6 +892,32 @@
         headerActionList.classList.toggle("active");
         overLay.classList.toggle("active");
       });
+
+      // const headerInputLabel = document.querySelectorAll(".header-input-label")
+
+      // const headerInputLabelInput = document.querySelector(".header-input-label input")
+
+      // headerInputLabelInput.addEventListener("click",)
+
+      const headerInputLabels = document.querySelectorAll(
+        ".header-input-label",
+      );
+
+      headerInputLabels.forEach((label) => {
+        const input = label.querySelector("input");
+
+        // Add class when input is focused
+        // Jab input focus ho to class add karein
+        input.addEventListener("focus", () => {
+          label.classList.add("active");
+        });
+
+        // Remove class when focus is lost
+        // Jab focus khatam ho to class hata dein
+        input.addEventListener("blur", () => {
+          label.classList.remove("active");
+        });
+      });
     </script>
   </body>
 </html>

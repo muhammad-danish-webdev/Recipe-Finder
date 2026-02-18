@@ -89,11 +89,11 @@
     }
 }
 
-.header-input-label.active-2 {
+.header-input-label.show-hide {
     width: 200px;
     /* Adjust as needed */
     opacity: 1;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* ################################  */
@@ -193,7 +193,7 @@
                         }
                     }
 
-                    .header-input-label.active {
+                    >.header-input-label.active {
                         input {
                             border-color: black;
 
@@ -205,10 +205,22 @@
                         }
                     }
 
-                    .header-input-label.active-2 {
+                    .header-input-label.show-hide {
                         width: 200px;
                         opacity: 1;
                         margin-left: 10px;
+                    }
+
+                    .header-input-label.active {
+                        input {
+                            border-color: black;
+
+                            &::placeholder {
+                                color: black;
+                            }
+
+                            &::before {}
+                        }
                     }
                 }
             }
@@ -250,7 +262,7 @@
                 /* Move up and rotate */
             }
 
-            .header-input-label {
+            >.header-input-label {
                 display: none;
             }
         }
