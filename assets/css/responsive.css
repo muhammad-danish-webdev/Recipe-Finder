@@ -544,10 +544,6 @@
 
                     .recipe-finder-feed-image-wrapper {
                         .feed-image-header {
-                            top: 24px;
-                            left: 20px;
-                            right: 20px;
-
                             .feed-image-heart-icon {
                                 svg {
                                     g {
@@ -690,7 +686,7 @@
     /* START :: Featured Recipe Section 
     ******************************************/
     .featured-recipe-section {
-        padding: 42px 0 50px;
+        padding: 32px 0 40px;
 
         .container {
             .featured-recipe-container {
@@ -741,14 +737,22 @@
         .container {
             .product-benefit-container {
                 .product-benefit-container-header {
-                    padding-bottom: 12px;
+                    padding-bottom: 0;
 
-                    .benefit-head {}
+                    h3.benefit-head {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
 
-                    span {}
+                    span {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
                 }
 
                 .product-benefit-main-container {
+                    gap: 10px;
+
                     .product-wrapper-list {
                         gap: 10px;
 
@@ -765,11 +769,19 @@
 
                                 .product-item-head {
                                     h5 {
-                                        font-size: 16px;
-                                        line-height: 21px;
+                                        padding-bottom: 2px;
+                                        font-size: 18px;
+                                        line-height: 23px;
                                     }
 
                                     .product-icon-box {
+                                        svg {
+                                            width: 16px;
+                                            height: 16px;
+
+                                            path {}
+                                        }
+
                                         .product-label {
                                             font-size: 14px;
                                             line-height: 18px;
@@ -779,20 +791,42 @@
 
                                 .rating-badge {
                                     display: none;
+
+                                    svg {
+                                        path {}
+                                    }
+
+                                    span {}
                                 }
                             }
                         }
                     }
 
-                    /* 
-                    .product-result-image-container { */
                     .recipe-finder-login-image {
                         img {}
                     }
 
                     .recipe-finder-feed-image-wrapper {
+                        aspect-ratio: 344/324;
+
                         .feed-image-header {
-                            .feed-image-heart-icon {}
+
+                            /* top: 16px;
+                            left: 14px;
+                            right: 14px; */
+                            .feed-image-heart-icon {
+                                svg {
+                                    g {
+                                        path {}
+                                    }
+
+                                    defs {
+                                        clipPath {
+                                            rect {}
+                                        }
+                                    }
+                                }
+                            }
 
                             .start-cook-btn {}
                         }
@@ -802,17 +836,241 @@
                         }
 
                         .feed-image-footer {
-                            .feed-image-title {}
+                            gap: 10px;
 
-                            .feed-image-desc {}
+                            h5.feed-image-title {
+                                font-size: 26px;
+                                line-height: 26px;
+                            }
+
+                            span.feed-image-desc {
+                                font-size: 16px;
+                                line-height: 21px;
+                            }
                         }
-
-                        &::before {}
                     }
-
-                    /* } */
                 }
             }
         }
     }
+
+    /* END :: Product Benefit Section 
+    ******************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Comment Section
+    *****************************************/
+    .recipe-comment-section {
+        .container {
+            .recipe-comment-container {
+                h4 {
+                    font-size: 22px;
+                    line-height: 28px;
+                    padding-bottom: 24px;
+
+                    span {}
+                }
+
+                .user-profile-cards-container {
+                    gap: 20px;
+
+                    .user-profile-card {
+                        .user-profile-card-container {
+                            .user-profile-card-header {
+                                .user-profile-card-info-container {
+                                    gap: 12px;
+
+                                    .user-profile-card-info {
+                                        gap: 16px;
+
+                                        .user-profile-image {
+                                            width: 48px;
+                                            height: 48px;
+
+                                            img {
+                                                width: 28px;
+                                                height: 49px;
+                                                margin-top: 14px;
+                                            }
+                                        }
+
+                                        .user-name {
+                                            font-size: 15px;
+                                            line-height: 20px;
+                                        }
+                                    }
+
+                                    .profile-card-desc {
+                                        font-size: 13px;
+                                        line-height: 17px;
+                                    }
+
+                                    .user-card-footer {
+                                        .user-card-stat {
+                                            svg {
+                                                path {}
+                                            }
+
+                                            span {
+                                                font-size: 12px;
+                                                line-height: 14px;
+                                            }
+                                        }
+
+                                        .card-posted-time {
+                                            font-size: 12px;
+                                            line-height: 14px;
+                                        }
+                                    }
+                                }
+
+                                .message-icon {
+                                    svg {
+                                        width: 19px;
+                                        aspect-ratio: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    & :nth-child(2).user-profile-card {
+                        .user-profile-card-container {
+                            .user-profile-card-header {
+                                .user-profile-card-info-container {
+                                    .user-profile-card-info {
+                                        .user-profile-image {
+                                            width: 48px;
+                                            height: 48px;
+
+                                            img {
+                                                width: 31px;
+                                                height: 43px;
+                                                /* margin-top: 20px; */
+                                                margin-top: 4px;
+                                            }
+                                        }
+
+                                        .user-name {}
+                                    }
+
+                                    .profile-card-desc {}
+
+                                    .user-card-footer {
+                                        .user-card-stat {
+                                            svg {
+                                                path {}
+                                            }
+
+                                            span {}
+                                        }
+
+                                        .card-posted-time {}
+                                    }
+                                }
+
+                                .message-icon {
+                                    svg {
+                                        path {}
+
+                                        circle {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(3).user-profile-card {
+                        .user-profile-card-container {
+                            .user-profile-card-header {
+                                .user-profile-card-info-container {
+                                    .user-profile-card-info {
+                                        .user-profile-image {
+                                            width: 48px;
+                                            height: 48px;
+
+                                            img {
+                                                width: 48px;
+                                                height: 48px;
+                                                margin-top: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* END :: Comment Section
+    *****************************************/
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* ############################  */
+    /* START :: Footer Section
+    *****************************************/
+    .footer-section {
+        display: block;
+
+        .container {
+            .footer-container {
+                .footer-list {
+                    .footer-list-item {
+                        .home-container-link {
+                            svg {
+                                path {}
+                            }
+                        }
+
+                        .heart-container-link {
+                            svg {
+                                g {
+                                    path {}
+                                }
+
+                                defs {
+                                    clipPath {
+                                        rect {}
+                                    }
+                                }
+                            }
+                        }
+
+                        .global-container-link {
+                            svg {
+                                circle {}
+
+                                line {}
+
+                                path {}
+                            }
+                        }
+
+                        .bookmark-container-link {
+                            svg {
+                                path {}
+                            }
+                        }
+
+                        .user-container-link {
+                            svg {
+                                path {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* END :: Footer Section
+    *****************************************/
 }
