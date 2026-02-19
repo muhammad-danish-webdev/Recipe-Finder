@@ -13,6 +13,9 @@
 
                 .product-benefit-main-container {
                     .product-wrapper-list {
+                        position: relative;
+                        z-index: -1;
+
                         .product-wrapper-item {
                             .product-item-image {
                                 img {}
@@ -255,9 +258,12 @@
                 }
 
                 .product-benefit-main-container {
+                    display: flex;
                     flex-direction: column;
 
                     .product-wrapper-list {
+                        order: 2;
+
                         .product-wrapper-item {
                             padding-right: 14px;
 
@@ -296,6 +302,8 @@
                     }
 
                     .recipe-finder-feed-image-wrapper {
+                        order: 2;
+
                         .feed-image-header {
                             .feed-image-heart-icon {}
 
@@ -528,13 +536,18 @@
                         }
                     }
 
-                    /* .product-result-image-container { */
                     .recipe-finder-login-image {
-                        img {}
+                        img {
+                            border-radius: 30px;
+                        }
                     }
 
                     .recipe-finder-feed-image-wrapper {
                         .feed-image-header {
+                            top: 24px;
+                            left: 20px;
+                            right: 20px;
+
                             .feed-image-heart-icon {
                                 svg {
                                     g {
@@ -557,15 +570,23 @@
                         }
 
                         .feed-image-footer {
-                            h5.feed-image-title {}
+                            bottom: 16px;
+                            left: 18px;
+                            gap: 6px;
+
+                            h5.feed-image-title {
+                                font-size: 24px;
+                                line-height: 30px;
+                            }
 
                             span.feed-image-desc {
+                                font-size: 16px;
+                                line-height: 21px;
+
                                 br {}
                             }
                         }
                     }
-
-                    /* } */
                 }
             }
         }
@@ -581,8 +602,8 @@
                 position: relative;
 
                 .recipe-header-logo {
-                    font-size: 28px;
-                    line-height: 34px;
+                    font-size: 26px;
+                    line-height: 32px;
 
                     span {
                         font-size: 28px;
@@ -639,6 +660,21 @@
                     top: unset;
                     left: 0;
                     right: 0;
+
+                    input {
+                        padding: 11px 0 11px 40px;
+                    }
+
+                    svg {
+                        position: absolute;
+                        top: 8px;
+                        right: 8px;
+                        left: 8px;
+                    }
+
+                    input {
+                        svg {}
+                    }
                 }
             }
         }
