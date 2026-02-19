@@ -13,9 +13,6 @@
 
                 .product-benefit-main-container {
                     .product-wrapper-list {
-                        position: relative;
-                        z-index: -1;
-
                         .product-wrapper-item {
                             .product-item-image {
                                 img {}
@@ -1022,8 +1019,21 @@
 
         .container {
             .footer-container {
+                border-top: 1px solid #EEEEEE;
+
                 .footer-list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
                     .footer-list-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 16px 0 16px 10px;
+                        /* width: 100%; */
+                        position: relative;
+
                         .home-container-link {
                             svg {
                                 path {}
@@ -1045,12 +1055,31 @@
                         }
 
                         .global-container-link {
+                            background-color: #F6B100;
+                            width: 100%;
+                            padding: 24px;
+                            border-radius: 50%;
+                            position: absolute;
+                            /* bottom: 10px; */
+                            top: -30px;
+                            border-bottom: 1px solid black;
+                            border-left: 1px solid black;
+                            outline: 10px solid white;
+                            display: grid;
+                            place-items: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
                             svg {
-                                circle {}
+                                position: absolute;
+                                display: flex;
+                                /* fill: white; */
+                                stroke: white;
 
-                                line {}
-
-                                path {}
+                                path {
+                                    /* fill: white; */
+                                }
                             }
                         }
 
