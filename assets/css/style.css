@@ -79,13 +79,19 @@
 
 .header-input-label.active {
     input {
-        border-color: black;
+        border-color: #b98e21;
 
         &::placeholder {
             color: black;
         }
 
         &::before {}
+    }
+
+    svg {
+        path {
+            stroke: var(--primary-color);
+        }
     }
 }
 

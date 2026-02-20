@@ -1062,8 +1062,6 @@
                             position: absolute;
                             /* bottom: 10px; */
                             top: -30px;
-                            border-bottom: 1px solid black;
-                            border-left: 1px solid black;
                             outline: 10px solid white;
                             display: grid;
                             place-items: center;
