@@ -109,6 +109,7 @@
 .recipe-finder-header {
     position: sticky;
     top: 0;
+    z-index: 1;
     background-color: var(--primary-color);
 
     .container {
@@ -307,8 +308,6 @@
                 grid-template-columns: repeat(5, auto);
                 justify-content: space-between;
                 margin: 0 auto;
-                position: relative;
-                z-index: -1;
 
                 .featured-recipe-card {
                     width: 100%;
@@ -371,9 +370,6 @@
 .product-benefit-section {
     .container {
         .product-benefit-container {
-            position: relative;
-            z-index: -1;
-
             .product-benefit-container-header {
                 display: flex;
                 justify-content: space-between;
@@ -472,6 +468,62 @@
                                 span {}
                             }
                         }
+                    }
+
+                    /* Initial State for Animation */
+                    .product-wrapper-item {
+                        opacity: 0;
+                        transform: translateY(30px);
+                        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                        background: #ffffff;
+                        border-radius: 12px;
+                        padding: 15px;
+                        margin-bottom: 15px;
+                        list-style: none;
+                        /* Using the subtle shadow we discussed earlier */
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+                    }
+
+                    /* Animation Trigger Class */
+                    .product-wrapper-item.show {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                    /* Staggered Delay for List Items */
+                    .product-wrapper-item:nth-child(1) {
+                        transition-delay: 0.1s;
+                    }
+
+                    .product-wrapper-item:nth-child(2) {
+                        transition-delay: 0.2s;
+                    }
+
+                    .product-wrapper-item:nth-child(3) {
+                        transition-delay: 0.3s;
+                    }
+
+                    .product-wrapper-item:nth-child(4) {
+                        transition-delay: 0.4s;
+                    }
+
+                    .product-wrapper-item:nth-child(5) {
+                        transition-delay: 0.5s;
+                    }
+
+                    /* 
+                    /* Interactive Hover Effect */
+                    .product-wrapper-item:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                        cursor: pointer;
+                    }
+
+                    */
+
+                    /* Image Pulse Animation */
+                    .product-item-image img {
+                        transition: transform 0.5s ease;
                     }
                 }
 
@@ -625,13 +677,19 @@
 
     .container {
         .recipe-comment-container {
-            h4 {
-                font-family: var(--ff-urbanist);
-                font-weight: 600;
-                font-size: 24px;
-                line-height: 30px;
-                color: var(--secondary-color);
-                padding: 6px 0 41px;
+            .comment-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h4 {
+                    font-family: var(--ff-urbanist);
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: var(--secondary-color);
+                    padding: 6px 0 41px;
+                }
             }
 
             .user-profile-cards-container {
@@ -640,6 +698,15 @@
                 gap: 28px;
 
                 .user-profile-card {
+                    border-radius: 12px;
+                    transition: all .3s ease;
+                    will-change: transform;
+
+                    &:hover {
+                        transform: scale(1.01);
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                    }
+
                     .user-profile-card-container {
                         .user-profile-card-header {
                             display: flex;
@@ -711,11 +778,23 @@
                                     .user-card-stat {
                                         display: flex;
                                         gap: 8px;
+                                        align-items: center;
 
                                         span {
                                             font-size: 15px;
                                             line-height: 20px;
+                                            margin-top: 2px;
                                             color: var(--quick-silver);
+                                        }
+
+                                        svg {
+                                            &:active {
+                                                transform: scale(0.7);
+                                            }
+
+                                            &:hover {
+                                                transform: scale(1.08);
+                                            }
                                         }
                                     }
 

@@ -863,12 +863,12 @@
     .recipe-comment-section {
         .container {
             .recipe-comment-container {
-                h4 {
-                    font-size: 22px;
-                    line-height: 28px;
-                    padding-bottom: 24px;
-
-                    span {}
+                .comment-header {
+                    h4 {
+                        font-size: 22px;
+                        line-height: 28px;
+                        padding-bottom: 24px;
+                    }
                 }
 
                 .user-profile-cards-container {
